@@ -74,8 +74,8 @@ public class databaze {
             case 5:
                 return "Iné";
             default:
-                System.out.println("Neplatná voľba typu románu.");
-                return "";
+                System.out.println("Neplatná volba typu románu. Zadejte prosím znovu.");
+                return vyberTypRomanu(sc); 
         }
     }
 
@@ -88,19 +88,19 @@ public class databaze {
         System.out.println("5 .. 5.rocnik");
         int rocnik = pouzeCelaCisla(sc);
         switch (rocnik) {
-	        case 1:
-	            return "1.rocnik";
-	        case 2:
-	            return "2.rocnik";
-	        case 3:
-	            return "3.rocnik";
-	        case 4:
-	            return "4.rocnik";
-	        case 5:
-	            return "5.rocnik";
-	        default:
-	            System.out.println("Neplatná voľba typu románu.");
-	            return"";
+            case 1:
+                return "1.rocnik";
+            case 2:
+                return "2.rocnik";
+            case 3:
+                return "3.rocnik";
+            case 4:
+                return "4.rocnik";
+            case 5:
+                return "5.rocnik";
+            default:
+                System.out.println("Neplatná volba typu učebnice. Zadejte prosím znovu.");
+                return vyberTypUcebnice(sc); 
         }
     }
     
