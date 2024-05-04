@@ -16,7 +16,7 @@ import java.sql.Statement;
 
 
 public class databaze {
-	private static final String DB_URL = "jdbc:sqlite:C:/Users/matko/Desktop/Java/ProjektJAVAPRO2/moja_databaza.db";
+	private static final String DB_URL = "jdbc:sqlite:databazaSQLite.db";
     private Scanner sc;
     private Kniha[] prvkyDatabaze;
     private int posledniKniha;
@@ -493,5 +493,3 @@ public class databaze {
         return dostupnost;
     }
 }
-//Nedostatečné zpracování chyb v metodě pouzeCelaCisla(): Metoda pouzeCelaCisla() používá rekurzivní přístup k ověření, zda uživatel zadává celé číslo. To může být neefektivní a může vést k problémům s velkým množstvím rekurzivních volání. Místo toho by bylo vhodnější použít smyčku, která se opakuje, dokud uživatel nezadá platné celé číslo.
-//Nulové kontroly v metodách: Metoda najdiKnihaPodleNazvu() by měla provádět kontrolu, zda vracená kniha není null, než se pokusí přistoupit k jejím vlastnostem. Toto by mělo být zahrnuto všude tam, kde jsou výsledky hledání knihy používány.
