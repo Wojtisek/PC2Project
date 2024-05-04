@@ -66,17 +66,17 @@ public class main {
                     break;
                 case 11:
                 	sc.nextLine();
-                    System.out.println("Zadajte názov súboru pre načítanie údajov o knihe:");
+                    System.out.println("Zadajte nazev souboru pro nacteni udaju o knize:");
                     String nazovSuboru = sc.nextLine();
                     mojeDatabaze.nacitanieZoSuboru(nazovSuboru);
                     break;
                 case 12:
                 	mojeDatabaze.exportToSQLite();
                 	run = false;
-                	System.out.println("Program sa skočil");
+                	System.out.println("Program se ukncil");
                 	break;
                 default:
-                    System.out.println("Neplatná volba. Zadejte číslo od 1 do 11");
+                    System.out.println("Neplatna volba. Zadejte cislo od 1 do 12");
             }
         }
     }
