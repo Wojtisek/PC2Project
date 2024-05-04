@@ -11,24 +11,24 @@ public class main {
         try {
             Class.forName("org.sqlite.JDBC");
         } catch (ClassNotFoundException e) {
-            System.out.println("Chyba při načítání JDBC ovladace: " + e.getMessage());
+            System.out.println("Chyba pri nacitani JDBC ovladace: " + e.getMessage());
         }
         int volba;
         boolean run = true;
         while (run) {
-            System.out.println("Vyberte pozadovanou cinnost:");
-            System.out.println("1 .. Vložení nové knihy");
-            System.out.println("2 .. Upravenie knihy");
-            System.out.println("3 .. Zmazanie knihy");
+            System.out.println("Vyberte pozadovanou cinost:");
+            System.out.println("1 .. Vlozeni nove knihy");
+            System.out.println("2 .. Upraveni knihy");
+            System.out.println("3 .. Smazani knihy");
             System.out.println("4 .. Zmena dostupnosti");
-            System.out.println("5 .. Výpis knih");
-            System.out.println("6 .. Vyhladanie knihy");
-            System.out.println("7 .. Výpis podla autora");
-            System.out.println("8 .. V7pis podla typu knihy");
-            System.out.println("9 .. Výpis požičaných knih");
-            System.out.println("10 .. Uloženie info o knihe do suboru");
-            System.out.println("11 .. Načítanie info o knihe zo suboru");
-            System.out.println("12 .. Skončenie programu");
+            System.out.println("5 .. Vypis knih");
+            System.out.println("6 .. Vyhledani knihy");
+            System.out.println("7 .. Vypis podle autora");
+            System.out.println("8 .. Vypis podle typu knihy");
+            System.out.println("9 .. Vypis pujcenych knih");
+            System.out.println("10 .. Ulozeni info o knize do souboru");
+            System.out.println("11 .. Nacteni info o knize ze souboru");
+            System.out.println("12 .. Ukonceni programu");
             volba = mojeDatabaze.pouzeCelaCisla(sc);
             switch (volba) {
                 case 1:
@@ -60,7 +60,7 @@ public class main {
                     break;
                 case 10:
                 	sc.nextLine();
-                    System.out.println("Zadajte názov knihy, ktorú chcete uložiť:");
+                    System.out.println("Zadejte nazev knihy, kterou chcete ulozit:");
                     String nazovKnihy = sc.nextLine();
                     mojeDatabaze.ulozenieDoSuboru(nazovKnihy);
                     break;
