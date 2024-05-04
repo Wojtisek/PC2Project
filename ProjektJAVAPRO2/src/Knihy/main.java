@@ -6,6 +6,7 @@ public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         databaze mojeDatabaze = new databaze();
+        mojeDatabaze.vytvoritTabulku();
         mojeDatabaze.importFromSQLite();
         
         try {
