@@ -67,7 +67,6 @@ public class databaze {
     }
 
     public void importFromSQLite() {
-    	vytvoritTabulku();
         try (Connection connection = connect();
              Statement statement = connection.createStatement()) {
 
