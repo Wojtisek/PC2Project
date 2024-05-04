@@ -30,7 +30,7 @@ public class databaze {
         return DriverManager.getConnection(DB_URL);
     }
 
-    private void vytvoritTabulku() {
+    public void vytvoritTabulku() {
         String createTableQuery = "CREATE TABLE IF NOT EXISTS knihy (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "nazov TEXT," +
@@ -74,9 +74,9 @@ public class databaze {
             var resultSet = statement.executeQuery(selectQuery);
 
             while (resultSet.next()) {
-                String nazov = resultSet.getString("nazav");
+                String nazov = resultSet.getString("nazov");
                 String autor = resultSet.getString("autor");
-                int rokVydania = resultSet.getInt("rok_vydani");
+                int rokVydania = resultSet.getInt("rok_vydania");
                 boolean dostupnost = resultSet.getBoolean("dostupnost");
                 String typKnihy = resultSet.getString("typ_knihy");
 
