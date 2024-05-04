@@ -42,7 +42,7 @@ public class databaze {
              Statement statement = connection.createStatement()) {
             statement.execute(createTableQuery);
         } catch (SQLException e) {
-            System.out.println("Chyba pri vytvarani tabulky knihy: " + e.getMessage());
+            System.out.println("Chyba pri vytvareni tabulky knihy: " + e.getMessage());
         }
     }
     
@@ -58,9 +58,9 @@ public class databaze {
                         kniha.getNazev(), kniha.getAutor(), kniha.getRokVydani(), kniha.isDostupnost(), kniha.getTypKnihy());
                 statement.executeUpdate(insertQuery);
             }
-            System.out.println("Údaje boli úspešne exportované do SQLite databázy");
+            System.out.println("Udaje byly uspesne exportovane do SQLite databaze");
         } catch (SQLException e) {
-            System.out.println("Chyba pri exportovaní údajov do SQLite databázy: " + e.getMessage());
+            System.out.println("Chyba pri exportovani udaju do SQLite databaze: " + e.getMessage());
         } catch (NullPointerException e) {
             System.out.println("");
         }
@@ -75,17 +75,17 @@ public class databaze {
             var resultSet = statement.executeQuery(selectQuery);
 
             while (resultSet.next()) {
-                String nazov = resultSet.getString("nazov");
+                String nazov = resultSet.getString("nazav");
                 String autor = resultSet.getString("autor");
-                int rokVydania = resultSet.getInt("rok_vydania");
+                int rokVydania = resultSet.getInt("rok_vydani");
                 boolean dostupnost = resultSet.getBoolean("dostupnost");
                 String typKnihy = resultSet.getString("typ_knihy");
 
                 prvkyDatabaze[posledniKniha++] = new Kniha(nazov, autor, rokVydania, dostupnost, typKnihy);
             }
-            System.out.println("Údaje boli úspešne načítané z SQL databázy\n");
+            System.out.println("Udaje byly uspesne nactene z SQL databaze\n");
         } catch (SQLException e) {
-            System.out.println("Chyba pri načítavaní údajov zo SQLite databázy: " + e.getMessage());
+            System.out.println("Chyba pri nacteni udaju z SQLite databaze: " + e.getMessage());
         }
     }
 
