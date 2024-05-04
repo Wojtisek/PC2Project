@@ -74,7 +74,7 @@ public class main {
                 case 12:
                 	mojeDatabaze.exportToSQLite();
                 	run = false;
-                	System.out.println("Program se ukncil");
+                	System.out.println("Program se ukoncil");
                 	break;
                 default:
                     System.out.println("Neplatna volba. Zadejte cislo od 1 do 12");
